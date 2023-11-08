@@ -2,13 +2,26 @@
 
 // Input vertex data, different for all executions of this shader.
 layout(location = 0) in vec3 vertexPosition_modelspace;
-uniform mat4 transform;
+
+// Values that stay constant for the whole mesh.
+uniform mat4 MVP;
+
+out vec3 fragmentColor;
 
 void main(){
 
-    gl_Position.xyz = vertexPosition_modelspace;
-    gl_Position.w = 1.0;
-    gl_Position *= transform;
+	// Output position of the vertex, in clip space : MVP * position
+	gl_Position =  MVP * vec4(vertexPosition_modelspace,1);
+
+	vec4 lightOrigin = vec4(10.0,10.0,50.0,1.0);
+	vec4 position = vec4(vertexPosition_modelspace,1.0);
+	float distance = distance(lightOrigin,gl_Position);
+	float factor = 1.0;
+
+	fragmentColor = vec3(0,1,0);
+
 
 }
+
+
 
