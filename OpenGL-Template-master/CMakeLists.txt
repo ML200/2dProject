@@ -54,13 +54,19 @@ add_definitions(
 )
 
 # User playground
-add_executable(playground 
-	playground/playground.cpp
-	playground/playground.h
+add_executable(playground
+		playground/renderer.cpp
+		playground/renderer.h
 	playground/SimpleFragmentShader.fragmentshader
 	playground/SimpleVertexShader.vertexshader
 	common/shader.cpp
 	common/shader.hpp
+        playground/GameObject.cpp
+        playground/GameObject.h
+		Util/MatrixUtils.cpp
+		Util/MatrixUtils.h
+		Game/GameScene.cpp
+		Game/GameScene.h
 )
 target_link_libraries(playground
 	${ALL_LIBS}

@@ -8,13 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/deps/getopt.c" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/__/deps/getopt.c.obj" "gcc" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/__/deps/getopt.c.obj.d"
-  "C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/tests/gamma.c" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/gamma.c.obj" "gcc" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/gamma.c.obj.d"
+  "C:/Users/m/Documents/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/deps/getopt.c" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/__/deps/getopt.c.obj" "gcc" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/__/deps/getopt.c.obj.d"
+  "C:/Users/m/Documents/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/tests/gamma.c" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/gamma.c.obj" "gcc" "external/glfw-3.1.2/tests/CMakeFiles/gamma.dir/gamma.c.obj.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/cmake-build-debug/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
