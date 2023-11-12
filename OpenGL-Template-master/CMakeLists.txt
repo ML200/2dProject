@@ -66,8 +66,7 @@ add_executable(playground
 		Util/MatrixUtils.cpp
 		Util/MatrixUtils.h
 		Game/GameScene.cpp
-		Game/GameScene.h
-)
+		Game/GameScene.h Game/FloorManager.cpp Game/FloorManager.h playground/Globals.cpp playground/Globals.h common/parse_stl.cpp)
 target_link_libraries(playground
 	${ALL_LIBS}
 )

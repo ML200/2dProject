@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/m/Documents/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/examples
+# Install script for directory: C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2023.1.4/bin/mingw/bin/objdump.exe")
 endif()
 
