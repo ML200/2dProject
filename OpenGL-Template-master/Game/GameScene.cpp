@@ -145,7 +145,13 @@ void GameScene::awake() {
 void GameScene::update() {
     float movementSpeed = 10.0f;
     float viewWidth = 4.0f/3.0f * 50.0f;
+    const float maxRotationAngle = 45.0f; // Max angle in degrees
     globalTime += deltaTime;
+
+
+    float rotationAngle = (playerVelocity / maxPlayerSpeed) * maxRotationAngle;
+    rotationAngle = std::max(-maxRotationAngle, std::min(rotationAngle, maxRotationAngle));
+    gameObjects[0]->rotation.z=-rotationAngle; // Rotating around Z-axis
 
     // Handle player movement
     if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) {
