@@ -42,8 +42,12 @@ glm::mat4 initializeMVPTransformation(std::shared_ptr<GameObject> gameObject)
     GLuint MatrixIDnew = glGetUniformLocation(programID, "MVP");
     MatrixID = MatrixIDnew;
 
-    // Assuming Projection and View matrices are the same for all objects and pre-computed:
-    glm::mat4 Projection = glm::ortho(0.0f, (4.0f/3.0f)*50.0f, 0.0f, 50.0f, 0.1f, 100.0f);
+    // Assuming Projection and View matrices are the same for all objects:
+    // glm::mat4 Projection = glm::ortho(0.0f, (4.0f/3.0f)*50.0f, 0.0f, 50.0f, 0.1f, 100.0f); // Old orthographic projection
+
+    // Replace with perspective projection
+    glm::mat4 Projection = glm::perspective(glm::radians(90.0f), 4.0f / 3.0f, 0.1f, 100.0f);
+
     glm::mat4 View = glm::lookAt(
             glm::vec3(0, 0, -3), // Camera is at (4,3,-3), in World Space
             glm::vec3(0, 0, 0), // and looks at the origin
