@@ -1,7 +1,4 @@
-#include "renderer.h"
-#include "GameObject.h"
-#include "Game/GameScene.h"
-#include "Globals.h"
+#include "playground.h"
 
 // Include standard headers
 #include <stdio.h>
@@ -16,125 +13,35 @@ GLFWwindow* window;
 using namespace glm;
 
 #include <common/shader.hpp>
-#include <iostream>
-#include <chrono>
-
-
-void GLAPIENTRY MessageCallback(GLenum source,
-                                GLenum type,
-                                GLuint id,
-                                GLenum severity,
-                                GLsizei length,
-                                const GLchar* message,
-                                const void* userParam) {
-    // Print debug messages
-    std::cerr << "GL CALLBACK: " << (type == GL_DEBUG_TYPE_ERROR ? "** GL ERROR **" : "")
-              << " type = " << type
-              << ", severity = " << severity
-              << ", message = " << message << "\n";
-}
-
-
-
-glm::mat4 initializeMVPTransformation(std::shared_ptr<GameObject> gameObject)
-{
-    // Get a handle for our "MVP" uniform
-    GLuint MatrixIDnew = glGetUniformLocation(programID, "MVP");
-    MatrixID = MatrixIDnew;
-
-    // Assuming Projection and View matrices are the same for all objects and pre-computed:
-    glm::mat4 Projection = glm::ortho(0.0f, (4.0f/3.0f)*50.0f, 0.0f, 50.0f, 0.1f, 100.0f);
-    glm::mat4 View = glm::lookAt(
-            glm::vec3(0, 0, -3), // Camera is at (4,3,-3), in World Space
-            glm::vec3(0, 0, 0), // and looks at the origin
-            glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
-    );
-
-    // Model matrix : transformation matrix for the GameObject
-    glm::mat4 Model = glm::mat4(1.0f);
-    Model = glm::translate(Model, gameObject->position);
-    Model = glm::rotate(Model, glm::radians(gameObject->rotation.x), glm::vec3(1, 0, 0));
-    Model = glm::rotate(Model, glm::radians(gameObject->rotation.y), glm::vec3(0, 1, 0));
-    Model = glm::rotate(Model, glm::radians(gameObject->rotation.z), glm::vec3(0, 0, 1));
-    Model = glm::scale(Model, gameObject->scale);
-
-    // Our ModelViewProjection : multiplication of our 3 matrices
-    glm::mat4 MVP = Projection * View * Model; // Remember, matrix multiplication is the other way around
-
-    return MVP;
-}
-
-
-
-void updateAnimationLoop(std::vector<std::shared_ptr<GameObject>> gameObjects)
-{
-
-    auto startTime = std::chrono::system_clock::now();
-
-    // Clear the screen
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-    // Use our shader
-    glUseProgram(programID);
-
-    for (auto& gameObject : gameObjects) {
-        // Compute the MVP matrix from gameObject parameters
-        glm::mat4 MVP = initializeMVPTransformation(gameObject);
-        GLint colorLocation = glGetUniformLocation(programID, "inputColor");
-
-        glBindVertexArray(gameObject->vertexArrayID);
-
-        // Send our transformation to the currently bound shader,
-        // in the "MVP" uniform
-        glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
-        glUniform3f(colorLocation, gameObject->color.x, gameObject->color.y, gameObject->color.z);
- 
-
-        // Draw the object
-        glDrawArrays(GL_TRIANGLES, 0, gameObject->vertexList.size()); // Drawing the object
-
-        glBindVertexArray(0);
-    }
-
-    // Swap buffers
-    glfwSwapBuffers(window);
-    glfwPollEvents();
-
-    auto endTime = std::chrono::system_clock::now();
-
-    std::chrono::duration<float> elapsed = endTime - startTime;
-    deltaTime = elapsed.count();  // deltaTime in seconds
-}
-
-
-
-
 
 int main( void )
 {
-
     //Initialize window
     bool windowInitialized = initializeWindow();
     if (!windowInitialized) return -1;
 
+    //Initialize vertex buffer
+    bool vertexbufferInitialized = initializeVertexbuffer();
+    if (!vertexbufferInitialized) return -1;
+
+    glEnable(GL_DEPTH_TEST);
 
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
 
+    initializeMVPTransformation();
 
-    GameScene gameScene;
-    gameScene.window = window;
-    gameScene.awake();
-
-    glEnable(GL_DEPTH_TEST);
+    curr_x = 0;
+    curr_y = 0;
 
     //start animation loop until escape key is pressed
     do{
-        gameScene.update();
-        updateAnimationLoop(gameScene.gameObjects);
+
+        updateAnimationLoop();
+
     } // Check if the ESC key was pressed or the window was closed
     while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
-           glfwWindowShouldClose(window) == 0 && !gameScene.endGame  );
+           glfwWindowShouldClose(window) == 0 );
 
 
     //Cleanup and close window
@@ -145,8 +52,46 @@ int main( void )
     return 0;
 }
 
+void updateAnimationLoop()
+{
+    // Clear the screen
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    // Use our shader
+    glUseProgram(programID);
 
+    if (glfwGetKey(window, GLFW_KEY_W)) curr_y+=0.01;
+    else if (glfwGetKey(window, GLFW_KEY_S)) curr_y-=0.01;
+    else if (glfwGetKey(window, GLFW_KEY_A)) curr_x-=0.01;
+    else if (glfwGetKey(window, GLFW_KEY_D)) curr_x+=0.01;
+    else if (glfwGetKey(window, GLFW_KEY_R)) curr_angle += 0.01;
+    initializeMVPTransformation();
+
+    // Send our transformation to the currently bound shader,
+    // in the "MVP" uniform
+    glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
+
+    // 1rst attribute buffer : vertices
+    glEnableVertexAttribArray(0);
+    glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
+    glVertexAttribPointer(
+            0,                  // attribute 0. No particular reason for 0, but must match the layout in the shader.
+            3,  // size
+            GL_FLOAT,           // type
+            GL_FALSE,           // normalized?
+            0,                  // stride
+            (void*)0            // array buffer offset
+    );
+
+    // Draw the triangle !
+    glDrawArrays(GL_TRIANGLES, 0, vertexbuffer_size*3); // 3 indices starting at 0 -> 1 triangle
+
+    glDisableVertexAttribArray(0);
+
+    // Swap buffers
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+}
 
 bool initializeWindow()
 {
@@ -158,14 +103,11 @@ bool initializeWindow()
         return false;
     }
 
-
-
     glfwWindowHint(GLFW_SAMPLES, 4);
-    // Request an OpenGL debug context.
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // To make MacOS happy; should not be needed
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE); // Request debug context
 
     // Open a window and create its OpenGL context
     window = glfwCreateWindow(1024, 768, "Demo: Cube", NULL, NULL);
@@ -186,10 +128,6 @@ bool initializeWindow()
         return false;
     }
 
-    // Enable debug output
-    glEnable(GL_DEBUG_OUTPUT);
-    glDebugMessageCallback(MessageCallback, 0);
-
     // Ensure we can capture the escape key being pressed below
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
@@ -198,7 +136,7 @@ bool initializeWindow()
     return true;
 }
 
-/*bool initializeMVPTransformation()
+bool initializeMVPTransformation()
 {
     // Get a handle for our "MVP" uniform
     GLuint MatrixIDnew = glGetUniformLocation(programID, "MVP");
@@ -211,7 +149,7 @@ bool initializeWindow()
     glm::mat4 Projection = glm::ortho(0.0f, 4.0f/3.0f*5.0f, 0.0f, 5.0f, 0.1f, 100.0f);
     // Camera matrix
     glm::mat4 View = glm::lookAt(
-            glm::vec3(0, 0, -3), // Camera is at (4,3,-3), in World Space
+            glm::vec3(4, 3, -3), // Camera is at (4,3,-3), in World Space
             glm::vec3(0, 0, 0), // and looks at the origin
             glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
     );
@@ -232,9 +170,7 @@ bool initializeWindow()
 
     return true;
 
-}*/
-
-
+}
 
 bool initializeVertexbuffer()
 {
