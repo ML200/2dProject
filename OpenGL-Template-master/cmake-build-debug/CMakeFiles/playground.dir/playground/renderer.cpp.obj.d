@@ -16,6 +16,7 @@ CMakeFiles/playground.dir/playground/renderer.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/GL/glu.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/x86_64-w64-mingw32/include/GL/gl.h \
+ C:\Users\m\OneDrive\Dokumente\GitHub\2dProject\OpenGL-Template-master\playground\Camera.h \
  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/glm.hpp \
  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
@@ -238,6 +239,14 @@ CMakeFiles/playground.dir/playground/renderer.cpp.obj: \
  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/integer.hpp \
  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_integer.hpp \
  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_integer.inl \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.hpp \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.hpp \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.inl \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.inl \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.hpp \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.hpp \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.inl \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.inl \
  C:\Users\m\OneDrive\Dokumente\GitHub\2dProject\OpenGL-Template-master\playground\GameObject.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocator.h \
@@ -361,13 +370,18 @@ CMakeFiles/playground.dir/playground/renderer.cpp.obj: \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/GameObject.h \
  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/include/GLFW/glfw3.h \
- C:\Users\m\OneDrive\Dokumente\GitHub\2dProject\OpenGL-Template-master\playground\Globals.h \
- C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
- C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.hpp \
- C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.inl \
- C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
- C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/common/shader.hpp \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Camera.h \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialSystem.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/thread \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_thread.h \
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/this_thread_sleep.h \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
  C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
- C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h
+ C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h \
+ C:\Users\m\OneDrive\Dokumente\GitHub\2dProject\OpenGL-Template-master\playground\Globals.h \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
+ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/common/shader.hpp

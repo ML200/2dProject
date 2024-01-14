@@ -33,7 +33,7 @@ class Renderer {
 public:
     // ... possibly other rendering-related members ...
 
-    void setupGameObject(GameObject& gameObject) {
+    /*void setupGameObject(GameObject& gameObject) {
         // Assuming GameObject has its own VAO and VBO members
         setupVertexBuffer(gameObject.vbo, gameObject.vertexList);
         setupVertexArray(gameObject.vao, gameObject.vbo, 0, 1); // Assuming locations 0 and 1 for position and color
@@ -43,7 +43,7 @@ public:
         // Compute model matrix from gameObject and draw it with its own draw call
         glm::mat4 modelMatrix = computeModelMatrix(gameObject);
         drawWithTransforms(modelMatrix, view, projection, gameObject.vertexList, shaderProgram, gameObject.vao);
-    }
+    }*/
 
 private:
     glm::mat4 computeModelMatrix(const GameObject& gameObject) {

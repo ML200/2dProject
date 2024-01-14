@@ -10,25 +10,28 @@
 #include <memory>
 #include "playground/GameObject.h"
 #include "glfw3.h"
+#include "playground/Camera.h"
+#include "CelestialSimulation/CelestialObject.h"
+#include "CelestialSimulation/CelestialSystem.h"
 
 class GameScene {
+private:
+    float lastX = 1920 / 2.0f;
+    float lastY = 1080 / 2.0f;
+    bool firstMouse = true;
+
+
 public:
-    std::vector<std::shared_ptr<GameObject>> coralObjects;
-    std::vector<std::shared_ptr<GameObject>> bubbleObjects;
+    std::vector<CelestialObject> celestialObjects;
     std::vector<std::shared_ptr<GameObject>> gameObjects;
 
-    std::vector<GLfloat> fishVertexList;
-    std::vector<GLfloat> coralVertexList;
-    std::vector<GLfloat> bubbleVertexList;
+    std::vector<GLfloat> starVertexList;
+
+    std::shared_ptr<Camera> camera;
 
     //pointer to the window
     GLFWwindow* window;
-
-    float coralSpawnTimer = 0.0f;
-    float coralSpawnInterval = 2.0f;  // Time in seconds between coral spawns
-
-    float bubbleSpawnTimer = 0.0f;
-    float bubbleSpawnInterval = 5.0f;  // Time in seconds between coral spawns
+    CelestialSystem celestialSystem;
 
     float globalTime = 0.0f;
     bool endGame = false;
@@ -36,19 +39,13 @@ public:
     void awake();
     void update();
 
-    void createFloor(float width, float height);
 
-    void generateRandomCoral(float viewWidth);
-
-
+    float cumulativePitch = 0.0f; // For up and down rotation (Pitch)
+    float cumulativeYaw = 0.0f;   // For left and right rotation (Yaw)
 
     float playerVelocity = 0.0f;
     float playerAcceleration = 100.0f;  // Acceleration speed
     float maxPlayerSpeed = 50.0f;       // Maximum speed
-
-    float speedMultiplier = 1.0f;       // Speed multiplier for the player
-
-    void generateRandomBubble(float viewWidth);
 };
 
 

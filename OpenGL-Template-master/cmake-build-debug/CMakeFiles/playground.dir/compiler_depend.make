@@ -562,8 +562,94 @@ CMakeFiles/playground.dir/Game/GameScene.cpp.obj: C:/Users/m/OneDrive/Dokumente/
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/GL/glu.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/GL/gl.h \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/include/GLFW/glfw3.h \
-  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Util/MatrixUtils.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Camera.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/glm.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/climits \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cfloat \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/float.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/float.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/fwd.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_float.hpp \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/vec2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_vec2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_vec2.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/vec4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_vec4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_vec4.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat2x2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat2x2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat2x2.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat2x3.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat2x3.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat2x3.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat2x4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat2x4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat2x4.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat3x2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat3x2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat3x2.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat3x3.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat3x3.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat3x3.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat3x4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat3x4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat3x4.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat4x2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat4x2.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat4x2.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat4x3.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat4x3.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat4x3.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/mat4x4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat4x4.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_mat4x4.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/trigonometric.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_trigonometric.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_trigonometric.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/_vectorize.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_vec1.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_vec1.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/exponential.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_exponential.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_exponential.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_vector_relational.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_vector_relational.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/common.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_common.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_common.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/packing.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_packing.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_packing.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_half.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/type_half.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/geometric.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_geometric.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_geometric.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/matrix.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_matrix.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_matrix.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/vector_relational.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/integer.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_integer.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_integer.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialSystem.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/thread \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_thread.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/this_thread_sleep.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Util/MatrixUtils.h \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Globals.h \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/common/parse_stl.h
 
@@ -1439,6 +1525,7 @@ CMakeFiles/playground.dir/playground/renderer.cpp.obj: C:/Users/m/OneDrive/Dokum
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/GL/glu.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/GL/gl.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Camera.h \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/glm.hpp \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/_fixes.hpp \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
@@ -1661,6 +1748,14 @@ CMakeFiles/playground.dir/playground/renderer.cpp.obj: C:/Users/m/OneDrive/Dokum
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/integer.hpp \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_integer.hpp \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_integer.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.inl \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/GameObject.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocator.h \
@@ -1784,16 +1879,21 @@ CMakeFiles/playground.dir/playground/renderer.cpp.obj: C:/Users/m/OneDrive/Dokum
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/GameObject.h \
   C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/include/GLFW/glfw3.h \
-  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Globals.h \
-  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
-  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.hpp \
-  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.inl \
-  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
-  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/common/shader.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Camera.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialSystem.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/thread \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_thread.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/this_thread_sleep.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/chrono \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio \
   C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime \
-  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h
+  C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Globals.h \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/matrix_transform.inl \
+  C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/common/shader.hpp
 
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwchar:
@@ -1817,6 +1917,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include
 C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Game/FloorManager.cpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector:
+
+C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_thread.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/inttypes.h:
 
@@ -2056,6 +2158,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cctype:
 
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Camera.h:
+
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512vpopcntdqintrin.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/x86_64-w64-mingw32/include/ctype.h:
@@ -2183,6 +2287,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/streambuf.tcc:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdexcept:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.hpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_ios.h:
 
@@ -2362,6 +2468,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512vp2intersectintrin.h:
 
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/quaternion.inl:
+
 C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_trigonometric.hpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/avx512vp2intersectvlintrin.h:
@@ -2520,10 +2628,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glfw-3.1.2/include/GLFW/glfw3.h:
 
-C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Globals.h:
-
-C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Util/MatrixUtils.cpp:
-
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/climits:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cfloat:
@@ -2602,9 +2706,29 @@ C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/g
 
 C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/detail/func_integer.hpp:
 
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.hpp:
+
 C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.hpp:
 
 C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/constants.inl:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtc/quaternion.inl:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.hpp:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/external/glm-0.9.7.1/glm/gtx/norm.inl:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialSystem.h:
+
+C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/thread:
+
+C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/this_thread_sleep.h:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/playground/Globals.h:
+
+C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Util/MatrixUtils.cpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.1.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h:
 

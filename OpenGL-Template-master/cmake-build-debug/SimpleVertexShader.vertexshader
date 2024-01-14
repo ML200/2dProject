@@ -3,20 +3,30 @@
 // Input vertex data, different for all executions of this shader.
 layout(location = 0) in vec3 vertexPosition_modelspace;
 
+// Instanced attributes (if used)
+layout(location = 1) in vec3 instancePositionOffset;
+layout(location = 2) in vec3 instanceColor;
+
 // Values that stay constant for the whole mesh.
 uniform mat4 MVP;
 uniform vec3 inputColor; // Uniform for the input color
+uniform bool isInstanced;  // Uniform to toggle instancing
 
 out vec3 fragmentColor;
 
 void main(){
+    vec3 position = vertexPosition_modelspace;
 
-	// Output position of the vertex, in clip space : MVP * position
-	gl_Position =  MVP * vec4(vertexPosition_modelspace,1);
+    // Apply instance position offset if instancing is used
+    if (isInstanced) {
+        position += instancePositionOffset;
+        fragmentColor = instanceColor;
+    } else {
+        fragmentColor = inputColor;
+    }
 
-	fragmentColor = inputColor;
-
-
+    // Output position of the vertex, in clip space : MVP * position
+    gl_Position = MVP * vec4(position, 1);
 }
 
 

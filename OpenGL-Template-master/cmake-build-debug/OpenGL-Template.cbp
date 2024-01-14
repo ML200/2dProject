@@ -1698,6 +1698,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialObject.h">
+			<Option target="playground"/>
+		</Unit>
+		<Unit filename="C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/CelestialSimulation/CelestialSystem.h">
+			<Option target="playground"/>
+		</Unit>
 		<Unit filename="C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Game/FloorManager.cpp">
 			<Option target="playground"/>
 		</Unit>
@@ -1708,6 +1714,9 @@
 			<Option target="playground"/>
 		</Unit>
 		<Unit filename="C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Game/GameScene.h">
+			<Option target="playground"/>
+		</Unit>
+		<Unit filename="C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/RenderingCore/RenderingManager.h">
 			<Option target="playground"/>
 		</Unit>
 		<Unit filename="C:/Users/m/OneDrive/Dokumente/GitHub/2dProject/OpenGL-Template-master/Util/MatrixUtils.cpp">

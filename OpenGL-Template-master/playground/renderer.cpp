@@ -36,8 +36,9 @@ void GLAPIENTRY MessageCallback(GLenum source,
 
 
 
-glm::mat4 initializeMVPTransformation(std::shared_ptr<GameObject> gameObject)
+glm::mat4 initializeMVPTransformation(std::shared_ptr<GameObject> gameObject, std::shared_ptr<Camera> camera)
 {
+
     // Get a handle for our "MVP" uniform
     GLuint MatrixIDnew = glGetUniformLocation(programID, "MVP");
     MatrixID = MatrixIDnew;
@@ -46,12 +47,24 @@ glm::mat4 initializeMVPTransformation(std::shared_ptr<GameObject> gameObject)
     // glm::mat4 Projection = glm::ortho(0.0f, (4.0f/3.0f)*50.0f, 0.0f, 50.0f, 0.1f, 100.0f); // Old orthographic projection
 
     // Replace with perspective projection
-    glm::mat4 Projection = glm::perspective(glm::radians(90.0f), 4.0f / 3.0f, 0.1f, 100.0f);
+    glm::mat4 Projection = glm::perspective(glm::radians(90.0f), 16.0f / 9.0f, 0.1f, 1000000.0f);
 
+    //std::cout<<"CAM P "<< camera->getPosition().x<<" : "<< camera->getPosition().y<<" : "<< camera->getPosition().z<<std::endl;
+    //std::cout<<"CAM R "<< eulerAngles(camera->getRotation()).x<<" : "<< eulerAngles(camera->getRotation()).y<<" : "<< eulerAngles(camera->getRotation()).z<<std::endl;
+
+    // Camera parameters
+    auto cameraRotation = camera->getRotation();
+    auto cameraPosition = camera->getPosition();
+    glm::vec3 cameraForward = glm::rotate(cameraRotation, glm::vec3(0.0f, 0.0f, -1.0f));
+    glm::vec3 cameraUp = glm::rotate(cameraRotation, glm::vec3(0.0f, 1.0f, 0.0f));
+
+
+    // View matrix using the camera's updated position and rotation
     glm::mat4 View = glm::lookAt(
-            glm::vec3(0, 0, -3), // Camera is at (4,3,-3), in World Space
-            glm::vec3(0, 0, 0), // and looks at the origin
-            glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+            cameraPosition,
+            //glm::vec3(0.0f,0.0f,0.0f),// Camera position
+            cameraPosition + cameraForward, // Look at point
+            cameraUp                        // Up vector
     );
 
     // Model matrix : transformation matrix for the GameObject
@@ -70,7 +83,7 @@ glm::mat4 initializeMVPTransformation(std::shared_ptr<GameObject> gameObject)
 
 
 
-void updateAnimationLoop(std::vector<std::shared_ptr<GameObject>> gameObjects)
+void updateAnimationLoop(std::vector<std::shared_ptr<GameObject>> gameObjects, std::shared_ptr<Camera> camera)
 {
 
     auto startTime = std::chrono::system_clock::now();
@@ -83,7 +96,7 @@ void updateAnimationLoop(std::vector<std::shared_ptr<GameObject>> gameObjects)
 
     for (auto& gameObject : gameObjects) {
         // Compute the MVP matrix from gameObject parameters
-        glm::mat4 MVP = initializeMVPTransformation(gameObject);
+        glm::mat4 MVP = initializeMVPTransformation(gameObject, camera);
         GLint colorLocation = glGetUniformLocation(programID, "inputColor");
 
         glBindVertexArray(gameObject->vertexArrayID);
@@ -135,7 +148,7 @@ int main( void )
     //start animation loop until escape key is pressed
     do{
         gameScene.update();
-        updateAnimationLoop(gameScene.gameObjects);
+        updateAnimationLoop(gameScene.gameObjects, gameScene.camera);
     } // Check if the ESC key was pressed or the window was closed
     while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
            glfwWindowShouldClose(window) == 0 && !gameScene.endGame  );
@@ -172,7 +185,7 @@ bool initializeWindow()
     glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE); // Request debug context
 
     // Open a window and create its OpenGL context
-    window = glfwCreateWindow(1024, 768, "Demo: Cube", NULL, NULL);
+    window = glfwCreateWindow(1920, 1080, "Demo: Cube", NULL, NULL);
     if (window == NULL) {
         fprintf(stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n");
         getchar();
@@ -197,8 +210,8 @@ bool initializeWindow()
     // Ensure we can capture the escape key being pressed below
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 
-    // Dark blue background
-    glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+    // Dark background
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     return true;
 }
 

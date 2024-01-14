@@ -3,6 +3,7 @@
 
 // Include GLEW
 #include <GL/glew.h>
+#include "Camera.h"
 
 // Include GLM
 #include <glm/glm.hpp>
